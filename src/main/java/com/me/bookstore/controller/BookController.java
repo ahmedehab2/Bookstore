@@ -39,7 +39,8 @@ public class BookController {
 
     @PostMapping("/save-book")
     public String saveBook(@ModelAttribute Book book) {
-        bookService.addBook(book);
+
+        bookService.save(book);
         return "redirect:/available-books";
     }
     @RequestMapping("/books/{id}")
@@ -53,6 +54,12 @@ public class BookController {
     public String deleteFromAvailableBooks(@PathVariable("id") int id){
         bookService.deleteBookById(id);
         return "redirect:/available-books";
+    }
+    @RequestMapping("/edit-book/{id}")
+    public String editBook(@PathVariable("id") int id,Model model){
+        Book book =bookService.getBookById(id);
+        model.addAttribute("book",book);
+        return "editBook";
     }
 
 

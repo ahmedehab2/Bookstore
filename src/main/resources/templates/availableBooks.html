@@ -50,6 +50,7 @@
         <td th:text="${b.price}+'$'"></td>
         <td><a class="btn btn-dark" th:href="@{/books/{id}(id=${b.id})}">Add to my books</a>
             <a class="btn btn-dark" th:href="@{/delete-book/{id}(id=${b.id})}">Delete</a>
+             <a class="btn btn-dark" th:href="@{/edit-book/{id}(id=${b.id})}">Edit</a>
         </td>
 
     </tr>

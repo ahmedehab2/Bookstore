@@ -16,7 +16,7 @@ public class BookServiceImpl implements BookService {
 
     }
     @Override
-    public void addBook(Book book) {
+    public void save(Book book) {
         bookRepository.save(book);
     }
 
@@ -37,5 +37,6 @@ public class BookServiceImpl implements BookService {
         bookRepository.deleteById(id);
 
     }
+
 
 }

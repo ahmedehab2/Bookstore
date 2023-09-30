@@ -4,13 +4,14 @@ import com.me.bookstore.entity.Book;
 
 import java.util.List;
 
-public interface BookService {
-    public void addBook(Book book);
-    public List<Book> getAvailableBooks();
+ public interface BookService {
+    void save(Book book);
+     List<Book> getAvailableBooks();
 
 
-    public Book getBookById(int id);
-    public void deleteBookById(int id);
+     Book getBookById(int id);
+     void deleteBookById(int id);
+
 
 
 }
